@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2rem;
+    .card{
+        box-shadow: 9px 13px 65px -27px rgba(0,0,0,0.71);
+    }
+    .btn-primary{
+        background-color: $light-green;
+        border: none;
+        transition: 0.2s;
+
+        &:hover{
+            background-color: $dark-green;
+        }
+    }
+}

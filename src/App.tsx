@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/app.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { DrinkContextProvider } from './context/drinksContext';
 
+import { Header } from './components/Header'
+import { Cards } from './components/Card';
+import { Details } from './components/Details';
+import { HomeContent } from './components/HomeContent';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <DrinkContextProvider>
+            <Header/>
+            <div className="content">
+              <HomeContent />
+              {/* <Cards/> */}
+              {/* <Details/> */}
+            </div>
+        </DrinkContextProvider>
+      </div>
   );
 }
 

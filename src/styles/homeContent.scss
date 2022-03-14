@@ -1,0 +1,37 @@
+@import './variables.scss';
+
+.content-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    flex-direction: row;
+    width: 100%;
+    .content-none{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        .img-thumbnail{
+            background-color: transparent !important;
+            border: none;
+            padding: 1.5rem;
+        }
+    
+        .content-text, .content-image{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+    
+        .content-text{
+            color: $black;
+            font-weight: 100;
+            img{
+                width: 40rem;
+            }
+        }
+    }
+}
