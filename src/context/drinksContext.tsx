@@ -31,7 +31,7 @@ const InitialValueDrinks: PropsDrinksContext = {
 };
 
 // interface ChildrenProps {
-//     children: JSX.Element | JSX.Element[]
+//     children: ReactNode
 // };
 
 export const DrinkContext = createContext<PropsDrinksContext>(InitialValueDrinks)

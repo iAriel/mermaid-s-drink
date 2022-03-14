@@ -9,10 +9,15 @@
     .card{
         box-shadow: 9px 13px 65px -27px rgba(0,0,0,0.71);
     }
-    .btn-primary{
-        background-color: $light-green;
-        border: none;
-        transition: 0.2s;
+    .see-details{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: $black;
+            border-radius:5px;
+            border: none;
+            background-color: $light-green;
 
         &:hover{
             background-color: $dark-green;

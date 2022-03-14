@@ -33,7 +33,7 @@ export function Header(){
           <Form>
             <Form.Group className="mb-3 content-search" controlId="formBasicEmail">
               <Form.Control type="text" placeholder="Buscar bebida" onChange={event => setDrinkSearch(event.target.value)}/>
-                <Button variant="primary" type="submit" onClick={onSubmit}>
+                <Button variant="primary" className="button-submit" type="submit" onClick={onSubmit}>
                 Buscar
                 </Button>
             </Form.Group>
