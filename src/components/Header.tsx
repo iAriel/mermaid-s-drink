@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 import { useState, useContext } from 'react';
 import { DrinkContext } from '../context/drinksContext';
 import { api } from '../services/api';
@@ -8,7 +8,7 @@ import Logo from '../assets/logo.svg';
 import '../styles/header.scss';
 
 export function Header(){
-  const {setDrinks, setHandleScreen, handleScreen, drinks} = useContext(DrinkContext);
+  const {setDrinks, setHandleScreen, handleScreen, drinkDetails} = useContext(DrinkContext);
   const [drinkSearch, setDrinkSearch] = useState('')
   
   const onSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -22,7 +22,7 @@ export function Header(){
     .catch(err => {
       console.log(err)
     })
-    if(drinkSearch){
+    if(drinkDetails.idDrink === "" ){
       setHandleScreen(!handleScreen)
     }
   }
@@ -39,6 +39,7 @@ export function Header(){
             </Form.Group>
           </Form>
         </div>
+        {drinkDetails.idDrink && <Link className="back-button" to="/">Voltar</Link>}
       </div>
     );
 }

@@ -5,15 +5,18 @@ type DrinkState = {
     idDrink: string;
     strDrink: string;
     strCategory: string;
-    strIgredient: [];
+    strInstructions: string,
     strDrinkThumb: string;
+    strAlcoholic: string;
 };
 
 type PropsDrinksContext = {
     drinks: DrinkState[];
     setDrinks: (newState: []) => void;
     handleScreen: boolean;
-     setHandleScreen: (newState: boolean) => void;
+    setHandleScreen: (newState: boolean) => void;
+    drinkDetails: DrinkState, 
+    setDrinkDetail: (newState: DrinkState) => void,
 };
 
 
@@ -22,12 +25,22 @@ const InitialValueDrinks: PropsDrinksContext = {
         idDrink: "",
         strDrink: "",
         strCategory: "",
-        strIgredient: [],
+        strInstructions: "",
         strDrinkThumb: "",
+        strAlcoholic: "",
     }],
     setDrinks: () => {},
     handleScreen: true, 
-    setHandleScreen: () => {}
+    setHandleScreen: () => {},
+    drinkDetails: {
+        idDrink: "",
+        strDrink: "",
+        strCategory: "",
+        strInstructions: "",
+        strDrinkThumb: "",
+        strAlcoholic: "",
+    }, 
+    setDrinkDetail: () => {},
 };
 
 // interface ChildrenProps {
@@ -39,9 +52,9 @@ export const DrinkContext = createContext<PropsDrinksContext>(InitialValueDrinks
 export const DrinkContextProvider: React.FC = ({children}) => {
     const [drinks, setDrinks] = useState<DrinkState[]>(InitialValueDrinks.drinks)
     const [handleScreen, setHandleScreen] = useState(InitialValueDrinks.handleScreen)
-
+    const [drinkDetails, setDrinkDetail] = useState(InitialValueDrinks.drinkDetails)
     return(
-        <DrinkContext.Provider value={{drinks, setDrinks, handleScreen, setHandleScreen}}>
+        <DrinkContext.Provider value={{drinks, setDrinks, handleScreen, setHandleScreen,drinkDetails, setDrinkDetail}}>
             {children}
         </DrinkContext.Provider>
     )

@@ -6,8 +6,12 @@
     justify-content: center;
 
     width: 100%;
+    .back-button{
+        text-decoration: none;
+    }
     .thumbnail-area{
         width: 50%;
+        border-right: 1px solid $vertical-line;
         .img-thumbnail{
             background-color: transparent !important;
             border: none;
@@ -20,16 +24,54 @@
             
         }
     }
-    .details-area{
+
+    .description-area{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 50%;
-        border-left: 1px solid $vertical-line;
-        .title{
-            font-weight:bold;
-            font-size: 2.5rem;
-            text-align: center;
-            text-decoration: underline 0.1rem $black;
-            text-underline-offset: 0.4rem;
+        .drink-title{
+            margin-bottom: 3rem;
+            .title{
+                color: $black;
+                font-weight:bold;
+                font-size: 2.5rem;
+                text-align: center;
+                text-decoration: underline 0.1rem $black;
+                text-underline-offset: 0.4rem;
+            }
         }
+        .details-drink{
+            width: 90%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $dark-green;
+            border: 1px dashed $light-green;
+            margin-bottom: 2rem;
+            .title-details{
+                font-weight: 600;
+                color: $black;
+            }
+            .info-drink{
+                color: $black;
+                text-align: center;
+            }
+        }
+        .extra-info{
+            display: flex;
+            flex-direction: row;
+            .extra{
+                font-weight: 600;
+                color: $black;
+                background-color: $dark-pink;
+                padding: 1rem 1rem 0rem 1rem;
+                border-radius: 0.5rem;
+                margin-bottom: 0rem !important;
+            }
+        }
+        
     }
     
 }
