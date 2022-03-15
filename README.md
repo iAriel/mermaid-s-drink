@@ -19,7 +19,7 @@
 <img src="https://ik.imagekit.io/arielSobreira/Captura_de_tela_2022-03-14_194200_IAInvzIkahxs.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647297742357">
 <h2>🚩Sobre </h2>
 
-<p>Projeto criado para simular uma loja de quadrinhos da Marvel. Para isso, foi necessário consumir a API disponibilizada pela Marvel onde é possível ter acesso gratuito a todos os quadrinhos.</p>
+<p>Projeto criado para simular o menu de um bar. Para isso, foi necessário consumir a API thecocktaildb onde é possível ter acesso gratuito a todos as bebidas e detalhes, além dos igredientes.</p>
 
 ## 🔨 Ferramentas
 
