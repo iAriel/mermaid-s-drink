@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { DrinkContextProvider } from './context/drinksContext';
 import { Header } from './components/Header'
-import { Cards } from './components/Card';
 import { Details } from './components/Details';
 import { HomeContent } from './components/HomeContent';
 function App() {
